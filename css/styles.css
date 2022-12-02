@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(90deg, #0C164D 0%, #190B22 100%);
+    overflow: hidden;
+}
+
+.planetsWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.planetsHeader {
+    position: absolute;
+    top: 1rem;
+    right: 5rem;
+}
+
+.heading {
+    margin-bottom: 0;
+    width: 625px;
+    height: 60px;
+    font-family: 'Secular One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 100%;
+    text-align: right;
+    letter-spacing: 0.09em;
+    color: #FFFFFF;
+}
+
+.subheading {
+    margin-top: 1rem;
+    width: 625px;
+    height: 24px;
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+    text-align: right;
+    letter-spacing: 0.6em;
+    color: #FFD029;
+}
+
+.planets {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+}
+
+aside {
+    border-radius: 50%;
+}
+
+.planets aside:hover {
+    cursor: pointer;
+}
+
+.infoWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.close {
+    font-size: 7rem;
+    position: absolute;
+    top: -1rem;
+    right: 1.5rem;
+    color: #FFD029;
+    opacity: 0.8;
+}
+
+.planetsInfo {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    gap: 0.5rem;
+    background-image: url("../img/stars.png");
+}
+
+.infoHeader__heading,
+.infoHeader__subheading {
+    text-align: left;
+}
+
+.planetText {
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 170%;
+    color: #FFFFFF;
+}
+
+.planetInfo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    padding-top: 1rem;
+    margin-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.planetMoons {
+    padding-top: 1rem;
+    margin-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+h3 {
+    font-family: 'Secular One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0.09em;
+    color: #FFFFFF;
+}
+
+p {
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 170%;
+    overflow-wrap: break-word;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #FFD029;;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 0.5s linear infinite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.pointer:hover {
+    cursor: pointer;
+}
+
+.close:after {
+    display: inline-block;
+    content: "\00d7";
+}
+
+.hide {
+    display: none;
+}
+
+footer img {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+}
